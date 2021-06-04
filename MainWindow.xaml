@@ -1,0 +1,36 @@
+﻿<Window x:Class="DogsExhibitionsSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:views="clr-namespace:DogsExhibitionsSystem.Views"
+        mc:Ignorable="d"
+        Title="Программная система, предназначенная для организаторов выставки собак"
+        Height="450"
+        Width="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding CreateDataBaseCmd}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <TabControl>
+            <TabItem Header="Собаки">
+                <views:DogsPageView DataContext="{Binding DogsPageVm}"/>
+            </TabItem>
+
+            <!--<TabItem Header="Ринги">
+                <views:DogsPageView DataContext="{Binding RingsPageViewModel}"/>
+            </TabItem>
+
+            <TabItem Header="Эксперты">
+                <views:DogsPageView DataContext="{Binding ExpertsPageViewModel}"/>
+            </TabItem>
+
+            <TabItem Header="Доп. информация">
+                <views:DogsPageView DataContext="{Binding ExpertsPageViewModel}"/>
+            </TabItem>-->
+        </TabControl>
+    </Grid>
+</Window>
