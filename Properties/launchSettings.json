@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Yap_Kursovaya2wpf": {
+    "DogsExhibitionsSystem": {
       "commandName": "Project",
       "commandLineArgs": "dogs.db 0"
     }
