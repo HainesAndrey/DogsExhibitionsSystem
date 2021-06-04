@@ -43,7 +43,7 @@ namespace DogsExhibitionsSystem.Helpers
         {
             builder.Entity<DogHandler>(dh =>
             {
-                dh.HasIndex(x => x.PasportNumber).IsUnique();
+                dh.HasIndex(x => x.PassportNumber).IsUnique();
             });
         }
 

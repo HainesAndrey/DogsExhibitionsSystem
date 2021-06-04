@@ -7,19 +7,19 @@ namespace DogsExhibitionsSystem.Models
     public class DogHandler : UniqueHuman
     {
         [Column("passportNumber")]
-        public string PasportNumber { get; set; }
+        public string PassportNumber { get; set; }
 
         #region Navigation props
         public virtual Dog Dog { get; set; }
         #endregion
 
-        public DogHandler(string surname, string firstName, string secondName, string pasportNumber) :
+        public DogHandler(string surname, string firstName, string secondName, string passportNumber) :
             base(surname, firstName, secondName)
         {
             Surname = surname;
             FirstName = firstName;
             SecondName = secondName;
-            PasportNumber = pasportNumber;
+            PassportNumber = passportNumber;
         }
     }
 }
