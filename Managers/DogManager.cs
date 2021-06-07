@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using DogsExhibitionsSystem.Bases;
+﻿using DogsExhibitionsSystem.Bases;
 using DogsExhibitionsSystem.Models;
+using System.Collections.Generic;
 
 namespace DogsExhibitionsSystem.Managers
 {
@@ -11,9 +10,12 @@ namespace DogsExhibitionsSystem.Managers
         {
         }
 
-        public IEnumerable<Dog> GetDogs()
-        {
-            return _dbManager.Dogs.ToArray();
-        }
+        public IEnumerable<Dog> GetDogs() => _dbManager.Dogs;
+
+        public IEnumerable<DogBreed> GetBreeds() => _dbManager.DogBreeds;
+
+        public IEnumerable<DogPedigree> GetPedigrees() => _dbManager.DogPedigrees;
+
+        public IEnumerable<DogHandler> GetHandlers() => _dbManager.DogHandlers;
     }
 }

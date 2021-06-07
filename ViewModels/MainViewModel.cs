@@ -43,7 +43,7 @@ namespace DogsExhibitionsSystem.ViewModels
 
         private void InitializeVms()
         {
-            DogsPageVm = new DogsPageViewModel(_dogManager);
+            DogsPageVm = new DogsPageViewModel(_dogManager, _clubManager);
             ExpertsPageVm = new ExpertsPageViewModel();
             RingsPageVm = new RingsPageViewModel(_ringManager);
             RequestsPageVm = new RequestsPageViewModel();

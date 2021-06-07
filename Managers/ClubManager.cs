@@ -1,6 +1,7 @@
 ﻿using DogsExhibitionsSystem.Bases;
 using DogsExhibitionsSystem.Interfaces;
 using DogsExhibitionsSystem.Models;
+using System.Collections.Generic;
 
 namespace DogsExhibitionsSystem.Managers
 {
@@ -8,6 +9,8 @@ namespace DogsExhibitionsSystem.Managers
     {
         public ClubManager(DbManager dbManager) : base(dbManager)
         { }
+
+        public IEnumerable<Club> GetClubs() => _dbManager.Clubs;
 
         public bool AddDogs(Club club, params Dog[] dogs)
         {
