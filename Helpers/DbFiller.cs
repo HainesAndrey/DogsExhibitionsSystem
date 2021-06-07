@@ -73,7 +73,7 @@ namespace DogsExhibitionsSystem.Helpers
             var clubs = dbManager.Clubs.ToArray();
             return new Dog[]
             {
-                new Dog("Жучка", 5, breeds[0].Id, pedigrees[0].Id, handlers[0].Id, clubs[0].Id, DateTime.Parse("10.10.2020")),
+                new Dog("Жучка", 5, breeds[0].Id, pedigrees[0].Id, handlers[0].Id, clubs[2].Id, DateTime.Parse("10.10.2020")),
             };
         }
 
