@@ -2,7 +2,7 @@
   "profiles": {
     "DogsExhibitionsSystem": {
       "commandName": "Project",
-      "commandLineArgs": "dogs.db 1"
+      "commandLineArgs": "dogsExhibitions.db 1"
     }
   }
 }
