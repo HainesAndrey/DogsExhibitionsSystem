@@ -20,7 +20,7 @@ namespace DogsExhibitionsSystem.ViewModels
         private ClubManager _clubManager;
         private DogManager _dogManager;
 
-        public ICommand CreateDataBaseCmd { get; private set; }
+        public IMvxAsyncCommand CreateDataBaseCmd { get; private set; }
 
         public MainViewModel()
         {

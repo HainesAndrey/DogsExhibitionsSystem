@@ -11,8 +11,9 @@ namespace DogsExhibitionsSystem.ViewModels
     public class DogsPageViewModel : MvxViewModel
     {
         private readonly DogManager _dogManager;
+        private ObservableCollection<Dog> _dogs;
 
-        public ObservableCollection<Dog> Dogs { get; private set; }
+        public ObservableCollection<Dog> Dogs { get => _dogs; private set => SetProperty(ref _dogs, value, nameof(Dogs)); }
 
         public ICommand RefreshGridCmd { get; set; }
 

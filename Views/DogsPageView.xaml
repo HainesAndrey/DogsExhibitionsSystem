@@ -14,12 +14,35 @@
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <DataGrid ItemsSource="{Binding Dogs}">
+        <DataGrid ItemsSource="{Binding Dogs}"
+                  AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}">
-                    <DataGridTextColumn.Header>
-                        <TextBlock Text="Имя"/>
-                    </DataGridTextColumn.Header>
+                <DataGridTextColumn Header="Кличка"
+                                    Binding="{Binding Name}">
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Порода"
+                                    Binding="{Binding Breed.Name}">
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Возраст"
+                                    Binding="{Binding Age}">
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Последняя прививка"
+                                    Binding="{Binding LastVaccinationDate}">
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Родословная"
+                                    Binding="{Binding Pedigree.DocumentNumber}">
+                </DataGridTextColumn>
+                
+                <DataGridTextColumn Header="Хозяин"
+                                    Binding="{Binding Handler.PassportNumber}">
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Клуб"
+                                    Binding="{Binding Club.Name}">
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
